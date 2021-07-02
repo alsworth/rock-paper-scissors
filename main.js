@@ -1,5 +1,5 @@
 function computerPlay() {
-    let myArray = ['Rock', 'Paper', 'Scissors'];
+    let myArray = ['rock', 'paper', 'scissors'];
     let randomElement = myArray[Math.floor(Math.random() * myArray.length)];
     return randomElement;
 }
@@ -47,11 +47,11 @@ function playRound(playerSelection, computerSelection) {
 
 
 function game() {
-    for (let i = 0; i <= 5; i++) {
+    for (let i = 1; i <= 5; i++) {
 
         let computerInput = computerPlay();
         let userInput = prompt("Enter a choice: rock, paper or scissors");
         console.log(playRound(userInput, computerInput));
-
     }
+    console.log("The winner is " +
 }
