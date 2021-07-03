@@ -1,9 +1,11 @@
+//Randomly selects a choice for the computer (rock, paper or scissors)
 function computerPlay() {
     let myArray = ['rock', 'paper', 'scissors'];
     let randomElement = myArray[Math.floor(Math.random() * myArray.length)];
     return randomElement;
 }
 
+//Displays the results for a 1 round game
 function playRound(playerSelection, computerSelection) {
 
     let playerChoice = playerSelection
@@ -11,8 +13,11 @@ function playRound(playerSelection, computerSelection) {
 
     playerChoice = playerChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
-    
 
+    //somehow calculate this in each return statement ?
+    let computerScore = 0;
+    let userScore = 0; 
+    
     if (playerSelection == computerSelection) {
         return "TIE";
     }
@@ -43,15 +48,17 @@ function playRound(playerSelection, computerSelection) {
 }
 
 
-
-
-
+//Displays each result of a 5 round game
 function game() {
     for (let i = 1; i <= 5; i++) {
 
         let computerInput = computerPlay();
         let userInput = prompt("Enter a choice: rock, paper or scissors");
-        console.log(playRound(userInput, computerInput));
+        let roundResults = playRound(userInput, computerInput);
+        console.log(roundResults);
     }
-    console.log("The winner is " +
+    
 }
+
+//Displays the winner at the end of the 5 round game
+
