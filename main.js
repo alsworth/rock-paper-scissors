@@ -20,8 +20,7 @@ function playRound(playerSelection, computerSelection) {
     playerChoice = playerChoice.toLowerCase();
     computerChoice = computerChoice.toLowerCase();
 
-    // console.log(playerChoice);
-    // console.log(computerChoice);
+;
 
     if (playerSelection === computerSelection) {
         computerScore += 0;
